@@ -7,3 +7,5 @@ const mongoose = require('mongoose')
 mongoose.connect(MONGO_URI)
     .then(() => server.start())
     .catch(console.log)
+
+

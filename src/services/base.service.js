@@ -22,12 +22,15 @@ class BaseService{
         return currentEntity
     }
 
-    async getAll(){
-        const entity = await this.repository.getAll()
-        return entity
+    async getAll(pageSize , pageNum){
+        return await this.repository.getAll(pageSize, pageNum)
+    
     }
 
-
+    async create(user){
+       
+        return await this.repository.create(user)
+    }
     async update(id, body){
         if(!id){
             const error = new Error()
